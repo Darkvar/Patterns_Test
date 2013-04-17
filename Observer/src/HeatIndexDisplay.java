@@ -1,29 +1,31 @@
 /**
  * Created with IntelliJ IDEA.
- * Date: 16.04.13
+ * Date: 17.04.13
  *
  * @author: mkalachyov
  */
-public class CurrentConditionsDisplay implements Observer, DisplayElement {
-    private float temperature;
-    private float humidity;
+public class HeatIndexDisplay implements Observer, DisplayElement {
+    float temperature;
+    float hIndex;
+    float pressure;
     private Subject weatherData;
 
-    public CurrentConditionsDisplay(Subject weatherData){
+    public HeatIndexDisplay(Subject weatherData){
         this.weatherData = weatherData;
         weatherData.registerObserver(this);
-    }
 
+    }
 
     @Override
     public void display() {
-        System.out.println("Current conditions are : " + temperature + " C and " + humidity + " % humidity");
+        System.out.println("Current Heat Index is " + hIndex);
     }
 
     @Override
     public void update(float temp, float humidity, float pressure) {
         this.temperature = temp;
-        this.humidity = humidity;
+        this.pressure = pressure;
+        this.hIndex = pressure * temperature;
         display();
     }
 }
