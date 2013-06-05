@@ -31,11 +31,11 @@ public class RemoteLoader {
         remoteControl.onButtonWasPushed(0);
         remoteControl.offButtonWasPushed(0);
         System.out.println(remoteControl);
-        remoteControl.undoButtonWasPushed(0);
+        remoteControl.undoButtonWasPushed();
 
         remoteControl.offButtonWasPushed(1);
         remoteControl.onButtonWasPushed(1);
-        remoteControl.undoButtonWasPushed(1);
+        remoteControl.undoButtonWasPushed();
         System.out.println(remoteControl);
 
         remoteControl.onButtonWasPushed(2);
