@@ -1,10 +1,11 @@
+import java.util.Iterator;
 /**
  * Created with IntelliJ IDEA.
  * Date: 30.06.13
  *
  * @author: mkalachyov
  */
-public class DinerMenu {
+public class DinerMenu implements Menu {
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
     MenuItem[] menuItems;

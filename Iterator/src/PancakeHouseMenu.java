@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created with IntelliJ IDEA.
@@ -6,7 +7,7 @@ import java.util.ArrayList;
  *
  * @author: mkalachyov
  */
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu {
     ArrayList menuItems;
 
     public PancakeHouseMenu() {
@@ -41,7 +42,7 @@ public class PancakeHouseMenu {
     }
 
     public Iterator createIterator(){
-        return new PancakeHouseMenuIterator(menuItems);
+        return menuItems.iterator();
     }
 
     public String toString() {
