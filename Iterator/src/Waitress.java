@@ -8,19 +8,24 @@ import java.util.Iterator;
 public class Waitress {
     Menu pancakeHouseMenu;
     Menu dinerMenu;
+    Menu cafeMenu;
 
-    public Waitress(Menu pancakeHouseMenu, Menu dinerMenu){
+    public Waitress(Menu pancakeHouseMenu, Menu dinerMenu, Menu cafeMenu){
         this.pancakeHouseMenu = pancakeHouseMenu;
         this.dinerMenu = dinerMenu;
+        this.cafeMenu = cafeMenu;
     }
 
     public void printMenu(){
         Iterator pancakeIterator = pancakeHouseMenu.createIterator();
         Iterator dinnerIterator = dinerMenu.createIterator();
+        Iterator cafeIterator = cafeMenu.createIterator();
         System.out.println("MENU\n----\nBREAKFAST");
         printMenu(pancakeIterator);
         System.out.println("MENU\n----\nLunch");
         printMenu(dinnerIterator);
+        System.out.println("MENU\n----\nDINNER");
+        printMenu(cafeIterator);
     }
 
     private void printMenu(Iterator iterator){
