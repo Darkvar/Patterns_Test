@@ -4,7 +4,7 @@
  *
  * @author: mkalachyov
  */
-public class MenuItem {
+public class MenuItem extends MenuComponent {
     String name;
     String description;
     boolean vegeterian;
@@ -31,5 +31,14 @@ public class MenuItem {
 
     public boolean isVegeterian(){
         return vegeterian;
+    }
+
+    public void print(){
+        System.out.print(" " + getName());
+        if (isVegeterian()) {
+            System.out.print("(v)");
+        }
+        System.out.println(", " + getPrice());
+        System.out.println("   -- " + getDescription());
     }
 }

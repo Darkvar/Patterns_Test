@@ -7,7 +7,7 @@ import java.util.Iterator;
  *
  * @author: mkalachyov
  */
-public class CafeMenu implements Menu {
+public class CafeMenu {
     Hashtable menuItems = new Hashtable();
 
     public CafeMenu() {
