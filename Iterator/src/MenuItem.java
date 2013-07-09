@@ -1,3 +1,4 @@
+import java.util.Iterator;
 /**
  * Created with IntelliJ IDEA.
  * Date: 30.06.13
@@ -40,5 +41,9 @@ public class MenuItem extends MenuComponent {
         }
         System.out.println(", " + getPrice());
         System.out.println("   -- " + getDescription());
+    }
+
+    public Iterator createIterator(){
+        return new NullIterator();
     }
 }

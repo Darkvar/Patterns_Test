@@ -1,3 +1,5 @@
+import java.util.Iterator;
+
 /**
  * Created with IntelliJ IDEA.
  * Date: 06.07.13
@@ -32,4 +34,6 @@ public abstract class MenuComponent {
     public void print(){
         throw new UnsupportedOperationException();
     }
+
+    public abstract Iterator createIterator();
 }
