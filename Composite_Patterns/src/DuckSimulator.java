@@ -11,11 +11,11 @@ public class DuckSimulator {
     }
 
     void simulate() {
-        Quackable mallardDuck = new MallardDuck();
-        Quackable redheadDuck = new RedHeadDuck();
-        Quackable duckCall = new DuckCall();
-        Quackable rubberDuck = new RubberDuck();
-        Quackable gooseDuck = new GooseAdapter(new Goose());
+        Quackable mallardDuck = new QuackCounter(new MallardDuck());
+        Quackable redheadDuck = new QuackCounter(new RedHeadDuck());
+        Quackable duckCall = new QuackCounter(new  DuckCall());
+        Quackable rubberDuck = new QuackCounter(new RubberDuck());
+        Quackable gooseDuck =  new GooseAdapter(new Goose());
 
         System.out.println("\nDuck Simulator");
 
@@ -24,6 +24,8 @@ public class DuckSimulator {
         simulate(duckCall);
         simulate(rubberDuck);
         simulate(gooseDuck);
+
+        System.out.println("The ducks quacked " + QuackCounter.getNumberOfQuacks() + " times");
     }
 
     void simulate(Quackable duck){
